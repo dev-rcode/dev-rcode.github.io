@@ -1,0 +1,126 @@
+<html>
+<head>
+
+    <meta charset="utf-8" /> 
+    <link rel="icon" type="image/png" href="https://flinoid.com/images/2.png">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" media="screen" />
+  <title>
+Rcode Help Dialog with Multi-Pages
+  </title>
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Varela+Round|Muli:200,400,800|Poppins|Lato|Playfair+Display" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css?family=Courgette|Fredoka+One&display=swap" rel="stylesheet">
+    <!--help dialog framework by rcode-->
+    <link rel="stylesheet" type="text/css" href="lib/style.css">
+    <link rel="stylesheet" type="text/css" href="lib/animate.min.css">
+    <script src="lib/help_dialog.js"></script>
+     <!--help dialog framework by rcode-->
+    </head>
+    <body>
+    <div id="myhelp">
+    <div class="help_page">Rcode help page 1, you can add all css design to this page</div>    
+    <div class="help_page">Rcode help page 2, you can add all css design to this page</div>    
+    <div class="help_page">Rcode help page 2, you can add all css design to this page</div>    
+    <div class="help_page">Rcode help page 2, you can add all css design to this page</div>    
+    </div>
+        <style>
+            .tit{
+                font-size: 3em;
+                text-align: center;
+                margin-top: 60px;
+            }
+            .btk{
+                width:200px;
+                font-size: 1.4em;
+                font-weight: 500;
+                border:2px solid black;
+                color:black;
+                background: transparent;
+                height: 50px;
+                margin-top: 20px;
+            }
+            .cd{
+                width:90%;
+                margin: 5%;
+                padding: 10px;
+                background: #fbfbfb;
+                border:1px solid gainsboro;
+                font-size: 1.5em;
+                margin-bottom: 20px;
+            }
+        </style>
+    <div class="tit">Help Dialog by Rcode with Multi-Pages</div>
+        <center><button class="btk" onclick="show_dialog()">Show Help</button></center>
+        <div class="cd">
+            <code>
+           <div style="color:gray"> &lt;!--Add Link Before Closeing Head &lt;/head&gt; tag --&gt;</div>
+    <div>&lt;link rel="stylesheet" type="text/css" href="lib/style.css"&gt;</div>   
+   <div> &lt;link rel="stylesheet" type="text/css" href="lib/animate.min.css&gt;></div>   
+    <div>&lt;script src="lib/help_dialog.js"&gt;&lt;/script&gt;</div>   
+                
+                </code>
+        </div>
+        
+     <div class="cd">
+            <code>
+           <div style="color:gray"> &lt;!--Add pages code after body opening tag and take note of the id &lt;body&gt; tag --&gt;</div>
+                <div>&lt;div id="myhelp"&gt;</div>
+    <div>&lt;div class="help_page"&gt;Rcode help page 1, you can add all css design to this page&lt;/div&gt;  </div>  
+    <div>&lt;div class="help_page"&gt;Rcode help page 2, you can add all css design to this page&lt;/div&gt;  </div>  
+    <div>&lt;div class="help_page"&gt;Rcode help page 3, you can add all css design to this page&lt;/div&gt;  </div>  
+    <div>&lt;div class="help_page"&gt;Rcode help page 4, you can add all css design to this page&lt;/div&gt;  </div>  
+    &lt;/div&gt;  
+                
+                </code>
+        </div>
+   <div class="cd">
+            <code>
+           <div style="color:gray"> &lt;!--Add javascript code before body closing tag &lt;/body&gt; tag --&gt;</div>
+                <div>
+                &lt;script&gt;<br/>
+            var helps = new helpDialog({<br/>
+                id:"myhelp" //set id of dialog pages element,<br/>
+                title:"hello boysss" //set dialog title,<br/>
+                animation:'flipInX' //set none for no animation or use other animation eg slideInLeft,FlipInY etc<br/>
+                shadow:false //set true if you want shadow around frame<br/>
+            });<br/>
+            helps.init(); //initialize components, this is required<br/>
+            helps.show(); //show dialog<br/>
+        &lt;/script&gt;
+                </div>
+                
+                </code>
+        </div>
+    <div class="cd">
+            <code>
+           <div style="color:gray"> &lt;!--More helpDialog controls --&gt;</div>
+                <div>
+           helps.show();//show dialog<br/>
+           helps.hide();//hide dialog<br/>
+                </div>
+                
+                </code>
+        </div>
+        
+        <script>
+            var helps = new helpDialog({
+                id:"myhelp",
+                title:"hello boysss",
+                animation:'flipInX',
+                shadow:false
+            });
+            helps.init();
+           // helps.show();
+        </script>
+        <script>
+        function show_dialog(){
+            helps.show();
+        }
+        </script>
+    </body>
+</html>
